@@ -1,0 +1,9 @@
+export const INSTAGRAM_LINK = "https://www.instagram.com/";
+export const TWITTER_LINK = "https://x.com/";
+export const TELEGRAN_LINK = "https://web.telegram.org/a/";
+export const YOUTUBE_LINK = "https://www.youtube.com/";
+export const HOME = "/";
+export const ABOUT = "#about";
+export const SERVICES = "#services";
+export const BLOG = "#blog";
+export const CONTACT_US = "#contact-us";
