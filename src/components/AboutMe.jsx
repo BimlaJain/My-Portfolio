@@ -1,54 +1,35 @@
 import React from 'react'
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
+import Image from 'next/image'
+import Heading from './common/Heading'
+import { KNOWLEDGE } from '@/utils/helper'
 
 const AboutMe = () => {
-    const aboutRef = useRef(null);
-    useEffect(() => {
-        // GSAP animations on scroll for About Me section
-        gsap.from(aboutRef.current, {
-            opacity: 0,
-            x: -100,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: aboutRef.current,
-                start: "top 80%",
-            },
-        });
-    }, []);
   return (
-          <div className="max-w-6xl mx-auto px-8 py-16" ref={aboutRef}>
-              <h2 className="text-3xl font-semibold mb-6">About Me</h2>
-              <div className="md:flex md:space-x-12">
-                  <img
-                      src="/profile-pointing.jpg"
-                      alt="Fawzi pointing"
-                      className="w-56 rounded-lg mb-8 md:mb-0"
-                  />
-                  <div>
-                      <p className="mb-8 text-gray-600 max-w-xl leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus metus in. Aliquet donec morbi convallis pretium. Turpis tempus pharetra.
+          <div className="container mx-auto px-5 pt-[69px] pb-12" >
+              <div className="md:flex justify-between items-center md:space-x-12">
+                 <Image src="/assets/images/png/about-img.png" width={681} height={690} alt='about-me'/>
+              <div>
+                  <Heading>About Me </Heading>
+                  <p className="text-custom-2xl leading-normal max-w-[687px] font-normal tracking-widest pb-[22px]">
+                      I believe a well-crafted website is not just about looks, but about solving real problems for users with intuitive design and smooth interactions.<br></br>
+                      With strong skills in HTML, CSS, JavaScript, React, Next.js, Bootstrap and Tailwind CSS, I enjoy turning creative ideas into fully functional websites that work seamlessly across devices.
+                      What excites me most is bringing designs to life while focusing on performance, accessibility, and user experience.
                       </p>
-                      {/* Skills */}
-                      {[
-                          { name: "Website Design", level: 85 },
-                          { name: "App Design", level: 80 },
-                          { name: "Graphic Design", level: 75 },
-                      ].map(({ name, level }) => (
-                          <div key={name} className="mb-4">
-                              <div className="flex justify-between mb-1 text-sm font-medium">
-                                  <span>{name}</span>
-                                  <span>{level}%</span>
-                              </div>
-                              <div className="w-full bg-gray-200 rounded-full h-2">
-                                  <div
-                                      className="bg-orange-500 h-2 rounded-full"
-                                      style={{ width: `${level}%` }}
-                                  ></div>
-                              </div>
+                  {KNOWLEDGE.map((obj, index) => (
+                      <div key={index} className="mb-4">
+                          <div className="flex justify-between mb-1 text-2xl font-semibold leading-auto py-2">
+                              <span>{obj.title}</span>
+                              <span>{obj.level}%</span>
                           </div>
-                      ))}
+                          <div className="w-full bg-gray-200 rounded-full h-2">
+                              <div
+                                  className="bg-orange-500 h-2 rounded-full"
+                                  style={{ width: `${obj.level}%` }}
+                              ></div>
+                          </div>
+                      </div>
+                  ))}
+
                   </div>
               </div>
           </div>

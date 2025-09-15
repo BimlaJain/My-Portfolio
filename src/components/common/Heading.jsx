@@ -1,7 +1,7 @@
 const Heading = ({ children, className = "", center }) => {
     return (
         <h2 data-aos="fade-up"
-            className={`${className} font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl !leading-119 text-black ${center ? "mx-auto text-center" : "text-start"
+            className={`${className} font-semibold text-4xl sm:text-5xl lg:text-6xl xl:text-custom-3.5xl leading-normal text-black ${center ? "mx-auto text-center" : "text-start"
                 }`}
         >
             {children}
