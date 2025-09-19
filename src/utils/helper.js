@@ -1,3 +1,4 @@
+
 export const NAV_LINKS = [
     {
         url: "#home",
@@ -91,5 +92,52 @@ export const SERVICES = [
         icon: "/assets/images/svg/bootstrap.svg",
         title: "Bootstrap",
         description: "Fast and flexible UI framework. I use Bootstrap’s pre-built components and grid system to build clean and responsive layouts with ease."
+    },
+];
+
+export const CATAGORIES = ["All", "React", "Next.js", "Javascript", "Animation"];
+
+export const PROJECTS = [
+    {
+        category: "React",
+        title: "MainChampaign web page ",
+        img: "/assets/images/png/mainchampaign.png",
+        url: "https://main-campaign-pink.vercel.app/",
+    },
+    {
+        category: "Next.js",
+        title: "Shop.co e-commerce web page",
+        img: "/assets/images/png/shop.png",
+        url:"https://shop-co-henna.vercel.app/",
+    },
+    {
+        category: "Javascript",
+        title: "Calculator App",
+        img: "/assets/images/png/calculator.png",
+        url: "https://calculator-azure-eta.vercel.app/",
+    },
+    {
+        category: "Animation",
+        title: "Hover animation",
+        img: "/assets/images/png/floating.png",
+        url: "https://creativity-task-with-hover.vercel.app/",
+    },
+    {
+        category: "React",
+        title: "Karmic web page ",
+        img: "/assets/images/png/karmic.png",
+        url: "https://karmic-six.vercel.app/",
+    },
+    {
+        category: "Javascript",
+        title: "Drag and drop ",
+        img: "/assets/images/png/dataskate.png",
+        url: "https://dataskate.vercel.app/",
+    },
+    {
+        category: "Javascript",
+        title: "To-Do Dashboard",
+        img: "/assets/images/png/to-do.png",
+        url: "https://to-do-dashboard-three.vercel.app/",
     },
 ];

@@ -31,7 +31,7 @@ const Header = () => {
                             className="max-xl:max-w-[170px] xl:h-[97px]"
                         />
                     </Link>
-                    <div className="flex items-center gap-10">
+                    <div className="flex items-center gap-2">
                         <div
                             className={`${nav ? "left-0" : "-left-full"
                                 } flex lg:flex-row flex-col items-center justify-center max-lg:bg-white max-lg:min-h-screen max-lg:fixed top-0 bottom-0 max-lg:h-full max-lg:w-full z-40 transition-all ease-linear duration-300 xl:gap-[17px] gap-2`}

@@ -1,29 +1,48 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { NAV_LINKS , SOCIAL_LINKS} from '@/utils/helper'
 
 const Footer = () => {
   return (
-      <div className="bg-gray-900 text-gray-300 py-8">
-          <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
-              <div className="flex items-center space-x-2 font-bold mb-4 md:mb-0">
-                  <img src="/logo.png" alt="BIMLA Logo" className="w-8 h-8" />
-                  <span>BIMLA<span className="text-orange-500">.dev</span></span>
+      <div className=" bg-off-white lg:pt-20 md:pt-14 pt-10">
+          <div className="container mx-auto px-5">
+              <div className="flex items-center justify-center lg:mb-[62px] md:mb-12 mb-9 ">
+                  <Link href="/">
+                      <Image
+                          width={261}
+                          height={97}
+                          src="/assets/images/png/logo.png"
+                          alt="logo"
+                          className="max-xl:max-w-[170px] xl:h-[97px]"
+                      />
+                  </Link>
               </div>
-              <ul className="flex space-x-6 text-sm">
-                  {["Home", "About Me", "Services", "Projects", "Testimonials", "Contact"].map((item) => (
-                      <li key={item} className="hover:text-orange-500 cursor-pointer">
-                          {item}
-                      </li>
+              <div className='flex flex-wrap justify-center gap-6 lg:gap-12 lg:mb-20 md:mb-14 mb-10'>
+                  {NAV_LINKS.map((obj, index) => (
+                      <Link
+                          className="capitalize font-normal xl:text-custom-2xl text-lg tracking-wider  text-black relative after:absolute after:w-0 after:h-[1px] after:-bottom-1 after:start-1/2 after:-translate-x-1/2 after:bg-black hover:after:w-full after:duration-300 "
+                          href={obj.url}
+                          key={index}
+                      >
+                          {obj.title}
+                      </Link>
                   ))}
-              </ul>
-              <div className="flex space-x-6 text-xl mt-4 md:mt-0">
-                  <a href="#" className="hover:text-orange-500"><i className="fab fa-twitter"></i></a>
-                  <a href="#" className="hover:text-orange-500"><i className="fab fa-youtube"></i></a>
-                  <a href="#" className="hover:text-orange-500"><i className="fab fa-instagram"></i></a>
-                  <a href="#" className="hover:text-orange-500"><i className="fab fa-linkedin"></i></a>
+              </div>
+              <div className="flex justify-center items-center gap-6 lg:pt-9 pt-5 pb-[62px]">
+                  {SOCIAL_LINKS.map((obj, index) => (
+                      <Link
+                          className="hover:scale-110 transition-transform duration-300"
+                          href={obj.url}
+                          key={index} target='_blank'
+                      >
+                          <Image src={obj.icon} width={32} height={32} alt={obj.alt} />
+                      </Link>
+                  ))}
               </div>
           </div>
-          <p className="text-center text-gray-600 text-sm mt-6">
-              &copy; 2023 FawziSayed. All Rights Reserved, Inc.
+          <p className="text-center bg-grey md:text-custom-2xl text-lg text-white lg:py-[26px] py-5">
+              &copy; {new Date().getFullYear()} <span className='text-orange'>BimlaDev</span> All Rights Reserved, Inc.
           </p>
       </div>
   )
