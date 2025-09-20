@@ -18,15 +18,13 @@ const Contact = () => {
     const handleInputChange = (e) => {
         const value = e.target.value.trim();
         if (value && validateEmail(value)) {
-            setError(""); // ✅ clear error automatically if valid
+            setError(""); 
         }
     };
 
     const sendEmail = (e) => {
         e.preventDefault();
         const emailValue = form.current.email.value.trim();
-
-        // Custom validation
         if (!emailValue) {
             setError("Please enter your email address.");
             return;
@@ -34,17 +32,13 @@ const Contact = () => {
             setError("Please enter a valid email address.");
             return;
         }
-
-        // If valid → clear error
         setError("");
-
-        // send via EmailJS
         emailjs
             .sendForm(
-                "service_krvtb88", // your service ID
-                "template_nd92fqi", // your template ID
+                "service_krvtb88", 
+                "template_nd92fqi", 
                 form.current,
-                "ACFWkn8tsi2tt71D6" // your public key
+                "ACFWkn8tsi2tt71D6" 
             )
             .then(
                 () => {
@@ -68,7 +62,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-8 py-16 text-center">
+        <div className="container mx-auto px-8 py-16 text-center">
             <Heading className="!text-center">Let’s Build Something Great Together</Heading>
             <Paragraph className="!mt-5 md:!mb-12 !mb-8">
                 Let’s stay connected! Share your email and I’ll get back to you soon.

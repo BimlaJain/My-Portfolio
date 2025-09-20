@@ -19,7 +19,6 @@ import Hero from "@/components/Hero";
 import AboutMe from "@/components/AboutMe";
 import Services from "@/components/Services";
 import MyProjects from "@/components/MyProjects";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 export default function Home() {
@@ -31,7 +30,6 @@ export default function Home() {
       <AboutMe/>
       <Services/>
       <MyProjects />
-      <Testimonials/>
       <Contact/>
     <Footer/>
     </div>

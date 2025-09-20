@@ -6,7 +6,7 @@ import Paragraph from './common/Paragraph'
 
 const AboutMe = () => {
     return (
-        <div className="container mx-auto px-5 pt-[69px] pb-12">
+        <div className="container mx-auto px-5 md:py-16 py-10">
             <div className="flex max-lg:flex-col-reverse justify-between items-center gap-8">
                 <div className="flex max-lg:hidden justify-center mb-8 md:mb-0">
                     <Image

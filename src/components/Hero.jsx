@@ -7,8 +7,7 @@ import Paragraph from './common/Paragraph';
 
 const Hero = () => {
   return (
-    <div>
-          <div className="container mx-auto px-5 xl:pt-[120px] sm:pt-14 pt-10">
+          <div className="container mx-auto px-5 sm:pt-14 pt-10">
               <div className="flex max-lg:flex-col justify-between items-center">
                   <div className=" flex-col">
                       <h3 className='font-semibold xl:text-2xl text-xl leading-normal'>Hi I am </h3>
@@ -35,7 +34,6 @@ const Hero = () => {
                   </div>
               </div> 
       </div>
-    </div>
   )
 }
 
